@@ -75,6 +75,14 @@ $ cd desafio-php-netcon
 ```bash
 $ composer install
 ```
+- Copie o arquivo ```.env.example``` e renomeio para ```.env```:
+```bash
+$ cp .env.example .env
+```
+- Gere a chave de aplicação:
+```bash
+$ php artisan key:generate
+```
 - Inicie o servidor:
 ```bash
 $ php artisan serve
