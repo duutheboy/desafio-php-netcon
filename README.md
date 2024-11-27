@@ -68,24 +68,24 @@
 
 - Clone o repositório:
 ```bash
-$ git clone https://github.com/duutheboy/desafio-php-netcon
-$ cd desafio-php-netcon
+ git clone https://github.com/duutheboy/desafio-php-netcon
+ cd desafio-php-netcon
 ```
 - Instale as dependências do Laravel:
 ```bash
-$ composer install
+ composer install
 ```
 - Copie o arquivo ```.env.example``` e renomeio para ```.env```:
 ```bash
-$ cp .env.example .env
+ cp .env.example .env
 ```
 - Gere a chave de aplicação:
 ```bash
-$ php artisan key:generate
+ php artisan key:generate
 ```
 - Inicie o servidor:
 ```bash
-$ php artisan serve
+ php artisan serve
 ```
 A aplicação estará disponível em http://localhost:8000 e http://127.0.0.1:8000
 
