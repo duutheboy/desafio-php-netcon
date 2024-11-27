@@ -130,6 +130,7 @@ A aplicação estará disponível em http://localhost:8000 e http://127.0.0.1:80
         "erro": "parametros invalidos"
      }
     ```
+Obs: Não optei em fazer testes unitários, apenas testei os endpoints manualmente atráves da ferramenta POSTMAN.
 ---
 ## Comparação entre Mockup e Projeto Realizado
 
