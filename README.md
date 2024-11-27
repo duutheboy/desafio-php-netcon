@@ -1,66 +1,134 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">
+  Desafio Netcon - Conversor de Anos-Luz/KM
+</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Condições
 
-## About Laravel
+> Este projeto é uma aplicação web desenvolvida em Laravel que permite a conversão de valores entre quilômetros (KM) e anos-luz, conforme os requisitos definidos no desafio do processo seletivo.  
+> A aplicação está dividida em **frontend** e **backend**, sendo o backend uma **API REST** com dois endpoints para realizar as conversões. O frontend apresenta uma interface com um menu lateral para alternar entre as duas opções de conversão, e os resultados são exibidos na tela em um popup estilizado.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Este projeto foi desenvolvido como parte do desafio para vaga de Estagiário de Desenvolvimento de Software na Netcon Americas (Recife - Pe).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Tecnologias utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```PHP 8```
+```Laravel```
+```Blade```
+```CSS e JavaScript```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## **Requisitos do Desafio**
 
-## Laravel Sponsors
+### **Frontend**
+1. **Tela de conversão de KM para anos-luz**
+   - Input para inserir valores em quilômetros.
+   - Botão para realizar a conversão.
+   - Validação para aceitar apenas valores numéricos positivos.
+   - Resultado exibido em um popup.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Tela de conversão de anos-luz para KM**
+   - Input para inserir valores em anos-luz.
+   - Botão para realizar a conversão.
+   - Validação para aceitar apenas valores numéricos positivos.
+   - Resultado exibido em um popup.
 
-### Premium Partners
+3. **Menu lateral**
+   - Alternar entre as telas de conversão.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### **Backend (API)**
+1. **Endpoint POST `/quilometros`**
+   - Recebe um valor numérico positivo em quilômetros.
+   - Retorna o valor convertido em anos-luz com no máximo 4 casas decimais.
+   - Validação para rejeitar valores não numéricos ou negativos.
+   - Status code 200 OK em casos de sucesso.
+   - Status code 400 ERROR em casos de erro.
 
-## Contributing
+2. **Endpoint POST `/anosLuz`**
+   - Recebe um valor numérico positivo em anos-luz.
+   - Retorna o valor convertido em quilômetros com no máximo 4 casas decimais.
+   - Validação para rejeitar valores não numéricos ou negativos.
+   - Status code 200 OK em casos de sucesso.
+   - Status code 400 ERROR em casos de erro.
+   
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Como Executar
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Pré-requisitos
 
-## Security Vulnerabilities
+- PHP >= 8.1
+- Composer
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Configuração
 
-## License
+- Clone o repositório:
+```bash
+$ git clone https://github.com/duutheboy/desafio-php-netcon
+$ cd desafio-php-netcon
+```
+- Instale as dependências do Laravel:
+```bash
+$ composer install
+```
+- Inicie o servidor:
+```bash
+$ php artisan serve
+```
+A aplicação estará disponível em http://localhost:8000 e http://127.0.0.1:8000
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## API Endpoints
+
+1. **Quilômetros para Anos-Luz**
+    - Endpoint:
+    ```POST  /api/quilometros```
+    - Corpo da requisição:
+     ```
+     {
+        "quilometros": "1234567890"
+     }
+    ```
+    - Exemplo de resposta com status 200:
+    ```
+     {
+        "anosLuz": "0.0001"
+     }
+    ```
+2.  **Anoz-Luz para Quilômetros**
+    - Endpoint:
+    ```POST /api/anosLuz```
+    - Corpo da requisição:
+     ```
+     {
+        "anoLuz": "0.0001"
+     }
+    ```
+    - Exemplo de resposta com status 200:
+    ```
+     {
+        "quilometros": 1234567890
+     }
+    ```   
+3. **Erro (padrão)**
+    - Exemplo de erro com status 400:
+    ```
+     {
+        "erro": "parametros invalidos"
+     }
+    ```
+---
+## Comparação entre Mockup e Projeto Realizado
+
+### **Mockup Fornecido**
+![Mockup Fornecido](public/img/mockup.png)
+
+### **Projeto Realizado**
+![Projeto Realizado](public/img/projetoRealizado.png)
+
+---
